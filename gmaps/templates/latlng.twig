@@ -1,0 +1,8 @@
+{% if active %}
+  <div id="gmaps-latlng" style="display: none;">
+    <input class="text" type="text" name="{{ name }}" id="{{ id }}" value="{{ value }}" data-name="geoposition" />
+  </div>
+  <div id="map" style="width: 100%; height: 200px;"></div>
+{% else %}
+  <p>A <a href="https://code.google.com/apis/console/?noredirect">Google Maps API Key</a> is not defined. Go to the <a href="/admin/settings/plugins/gmaps">settings</a> to add it.</p>
+{% endif %}

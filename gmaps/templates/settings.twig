@@ -1,0 +1,12 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+  first:        true,
+  label:        "API Key"|t,
+  id:           'GMapsAPIKey',
+  name:         'GMapsAPIKey',
+  instructions: "The API Key for Google Maps."|t,
+  value:        settings.GMapsAPIKey,
+  autofocus:    true,
+  errors:       settings.getErrors('GMapsAPIKey')
+}) }}
